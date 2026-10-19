@@ -1,0 +1,6 @@
+{
+  "name": "Chorsu Burger",
+  "description": "Chorsu Burger — Mazali va issiq burgerlar, zamonaviy menyu, bonus coins va buyurtma tizimi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

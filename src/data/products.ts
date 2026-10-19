@@ -1,0 +1,286 @@
+import { Product, BonusReward } from '../types';
+
+export const products: Product[] = [
+  {
+    id: 'chorsu-classic',
+    name: {
+      uz: 'Chorsu Classic Burger',
+      ru: 'Чорсу Классик Бургер',
+      en: 'Chorsu Classic Burger',
+    },
+    description: {
+      uz: 'Suvli mol go‘shti, yangi aysberg salati, pomidor, qizil piyoz va maxsus Chorsu sousi.',
+      ru: 'Сочная говяжья котлета, свежий салат айсберг, томаты, красный лук и фирменный соус Чорсу.',
+      en: 'Juicy beef patty, fresh iceberg lettuce, ripe tomatoes, red onions, and signature Chorsu sauce.',
+    },
+    price: 38000,
+    category: 'burger',
+    image: '/src/assets/images/chorsu_classic_burger_1792402611764.jpg',
+    calories: 580,
+    weightGrams: 320,
+    badge: {
+      uz: 'Bestseller',
+      ru: 'Хит продаж',
+      en: 'Bestseller',
+    },
+    rating: 4.9,
+    ingredients: {
+      uz: ['Mol go‘shti 100%', 'Brioş noni', 'Pishloq Chedder', 'Aysberg salati', 'Chorsu sousi'],
+      ru: ['Говядина 100%', 'Булочка бриошь', 'Сыр Чеддер', 'Салат айсберг', 'Фирменный соус'],
+      en: ['100% Halal Beef', 'Brioche Bun', 'Cheddar Cheese', 'Iceberg Lettuce', 'Chorsu Sauce'],
+    },
+  },
+  {
+    id: 'double-cheese',
+    name: {
+      uz: 'Double Cheese Burger',
+      ru: 'Дабл Чизбургер',
+      en: 'Double Cheese Burger',
+    },
+    description: {
+      uz: 'Ikkita qovurilgan mol go‘shti kotleti, erigan qo‘shaloq cheddor pishlog‘i va karamellangan piyoz.',
+      ru: 'Двойная сочная котлета из говядины, двойной расплавленный чеддер и карамелизированный лук.',
+      en: 'Two prime beef patties, double melted aged cheddar cheese, and caramelized sweet onions.',
+    },
+    price: 49000,
+    category: 'burger',
+    image: '/src/assets/images/double_cheese_burger_1792402612375.jpg',
+    calories: 780,
+    weightGrams: 420,
+    badge: {
+      uz: 'Pishloqli',
+      ru: 'Экстра Сыр',
+      en: 'Extra Cheesy',
+    },
+    rating: 5.0,
+    ingredients: {
+      uz: ['2x Mol go‘shti kotleti', '2x Chedder pishloq', 'Karamellangan piyoz', 'Tuzlangan bodring'],
+      ru: ['2x Говяжьи котлеты', '2x Сыр Чеддер', 'Карамелизированный лук', 'Маринованные огурчики'],
+      en: ['2x Beef Patties', '2x Cheddar Cheese', 'Caramelized Onions', 'Pickles'],
+    },
+  },
+  {
+    id: 'crispy-chicken',
+    name: {
+      uz: 'Crispy Chicken Burger',
+      ru: 'Криспи Чикен Бургер',
+      en: 'Crispy Chicken Burger',
+    },
+    description: {
+      uz: 'Qarsildoq oltin rang tovuq filesi, yangi bodring, aysberg va qaymoqli mayonez sousi.',
+      ru: 'Хрустящее золотистое филе цыпленка, маринованные огурцы, салат айсберг и нежный майонезный соус.',
+      en: 'Golden crispy chicken breast fillet, pickled cucumber, fresh iceberg, and creamy house mayo.',
+    },
+    price: 39000,
+    category: 'chicken',
+    image: '/src/assets/images/crispy_chicken_burger_1792402613359.jpg',
+    calories: 520,
+    weightGrams: 300,
+    badge: {
+      uz: 'Qarsildoq',
+      ru: 'Хрустящий',
+      en: 'Crunchy',
+    },
+    rating: 4.8,
+    ingredients: {
+      uz: ['Oltin tovuq filesi', 'Brioş noni', 'Tuzlangan bodring', 'Mayonez sousi', 'Yangi ko‘katlar'],
+      ru: ['Хрустящее филе цыпленка', 'Булочка бриошь', 'Огурчики', 'Нежный майонез', 'Зелень'],
+      en: ['Crispy Chicken Fillet', 'Brioche Bun', 'Pickles', 'Mayo Dressing', 'Fresh Greens'],
+    },
+  },
+  {
+    id: 'spicy-burger',
+    name: {
+      uz: 'Spicy Burger',
+      ru: 'Спайси Бургер',
+      en: 'Spicy Burger',
+    },
+    description: {
+      uz: 'Achchiq xalapeno qalampiri, o‘tkir sous, suvli mol go‘shti va qizigan cheddor.',
+      ru: 'Острый перец халапеньо, пикантный соус с чили, сочная говядина и растопленный сыр.',
+      en: 'Hot pickled jalapeños, fiery pepper sauce, prime beef patty, and melting melted cheddar.',
+    },
+    price: 42000,
+    category: 'burger',
+    image: '/src/assets/images/hero_chorsu_burger_1792402611169.jpg',
+    calories: 610,
+    weightGrams: 330,
+    badge: {
+      uz: 'Achchiq 🔥',
+      ru: 'Острый 🔥',
+      en: 'Spicy 🔥',
+    },
+    rating: 4.9,
+    ingredients: {
+      uz: ['Mol go‘shti', 'Xalapeno qalampiri', 'Achchiq chilli sous', 'Chedder', 'Qizil piyoz'],
+      ru: ['Говядина', 'Халапеньо', 'Острый соус чили', 'Чеддер', 'Красный лук'],
+      en: ['Beef Patty', 'Jalapeño Slices', 'Hot Chili Sauce', 'Cheddar', 'Red Onions'],
+    },
+  },
+  {
+    id: 'bbq-burger',
+    name: {
+      uz: 'BBQ Burger',
+      ru: 'BBQ Бургер',
+      en: 'BBQ Burger',
+    },
+    description: {
+      uz: 'Tutingan xushbo‘y BBQ sousi, qovurilgan piyoz halqalari, mayin go‘sht va karsillagan bekon.',
+      ru: 'Ароматный соус барбекю с дымком, хрустящие луковые кольца, нежная говядина и бекон.',
+      en: 'Smoky sweet BBQ sauce, crispy fried onion rings, tender beef patty, and savory crisp bacon.',
+    },
+    price: 44000,
+    category: 'burger',
+    image: '/src/assets/images/double_cheese_burger_1792402612375.jpg',
+    calories: 660,
+    weightGrams: 350,
+    rating: 4.8,
+    ingredients: {
+      uz: ['Mol go‘shti', 'Smoky BBQ sous', 'Piyoz halqalari', 'Bekon', 'Chedder pishloq'],
+      ru: ['Говядина', 'Соус BBQ с дымком', 'Луковые кольца', 'Бекон', 'Сыр Чеддер'],
+      en: ['Beef Patty', 'Smoky BBQ Sauce', 'Onion Rings', 'Bacon', 'Cheddar'],
+    },
+  },
+  {
+    id: 'mini-burger',
+    name: {
+      uz: 'Mini Burger Trio',
+      ru: 'Мини Бургер Трио',
+      en: 'Mini Slider Trio',
+    },
+    description: {
+      uz: 'Uch xil ta’mdagi kichik va yoqimli burgerlar: klassik, pishloqli va tovuqli.',
+      ru: 'Три аппетитных мини-бургера с разными вкусами: классический, сырный и с курицей.',
+      en: 'Three mini slider burgers with distinctive toppings: classic beef, extra cheese, and crispy chicken.',
+    },
+    price: 32000,
+    category: 'burger',
+    image: '/src/assets/images/chorsu_classic_burger_1792402611764.jpg',
+    calories: 450,
+    weightGrams: 280,
+    rating: 4.7,
+    ingredients: {
+      uz: ['3x Mini brioş noni', 'Mol va tovuq go‘shti', '3 xil sous', 'Pishloq'],
+      ru: ['3x Мини-булочки', 'Говядина и цыпленок', '3 разных соуса', 'Сыр'],
+      en: ['3x Mini Brioche Buns', 'Beef & Chicken', 'Assorted Sauces', 'Cheese'],
+    },
+  },
+  {
+    id: 'chicken-combo',
+    name: {
+      uz: 'Chicken Combo',
+      ru: 'Чикен Комбо Набор',
+      en: 'Chicken Combo Meal',
+    },
+    description: {
+      uz: 'Katta Crispy Chicken Burger + Oltin kartoshka fri + Muzdek Cola (0.5L) + Chorsu sousi.',
+      ru: 'Большой Криспи Чикен Бургер + Золотистый картофель фри + Освежающая Кола 0.5л + Соус.',
+      en: 'Big Crispy Chicken Burger + Golden crispy French Fries + Chilled Cola (0.5L) + Dip Sauce.',
+    },
+    price: 55000,
+    category: 'combo',
+    image: '/src/assets/images/chorsu_combo_meal_1792402613347.jpg',
+    calories: 890,
+    weightGrams: 580,
+    badge: {
+      uz: 'Aksiya',
+      ru: 'Выгода',
+      en: 'Value Combo',
+    },
+    rating: 4.9,
+    ingredients: {
+      uz: ['Katta Tovuq Burgeri', 'Kartoshka fri', 'Coca-Cola 0.5L', 'Pishloqli sous'],
+      ru: ['Большой куриный бургер', 'Картофель фри', 'Coca-Cola 0.5L', 'Сырный соус'],
+      en: ['Large Chicken Burger', 'French Fries', 'Coca-Cola 0.5L', 'Cheese Dip'],
+    },
+  },
+  {
+    id: 'chorsu-special',
+    name: {
+      uz: 'Chorsu Special King Burger',
+      ru: 'Чорсу Спешиал Кинг Бургер',
+      en: 'Chorsu Special King Burger',
+    },
+    description: {
+      uz: 'Uch qavatli ulkan burger: tanlangan go‘sht, qovurilgan tuxum, pastrami, eritilgan motzarella va sarimsoqli o‘tli maxsus sous.',
+      ru: 'Королевский бургер: мраморная котлета, глазунья, пастрами, расплавленная моцарелла и чесночно-травяной соус.',
+      en: 'The ultimate royal burger: thick marbled beef, sunny-side egg, pastrami, melted mozzarella, and garlic herb sauce.',
+    },
+    price: 58000,
+    category: 'burger',
+    image: '/src/assets/images/hero_chorsu_burger_1792402611169.jpg',
+    calories: 950,
+    weightGrams: 510,
+    badge: {
+      uz: 'Chef Special ⭐',
+      ru: 'Шеф-выбор ⭐',
+      en: 'Chef Special ⭐',
+    },
+    rating: 5.0,
+    ingredients: {
+      uz: ['Sara mol go‘shti 220g', 'Pastrami', 'Qovurilgan tuxum', 'Motzarella', 'Maxsus sous'],
+      ru: ['Мраморная говядина 220г', 'Пастрами', 'Яйцо глазунья', 'Моцарелла', 'Чесночный соус'],
+      en: ['Prime Marbled Beef 220g', 'Pastrami', 'Fried Egg', 'Mozzarella', 'Garlic Herb Sauce'],
+    },
+  },
+];
+
+export const bonusRewards: BonusReward[] = [
+  {
+    id: 'free-drink',
+    coinsRequired: 100,
+    title: {
+      uz: 'Bepul Muzdek Ichimlik',
+      ru: 'Бесплатный Холодный Напиток',
+      en: 'Free Chilled Beverage',
+    },
+    description: {
+      uz: 'Buyurtmangizga qo‘shimcha bepul Cola, Fanta yoki muzdek Chorsu Ayrıni.',
+      ru: 'Бесплатная Кола, Фанта или айран к любому вашему заказу.',
+      en: 'Complimentary Coca-Cola, Fanta, or fresh Ayran with any order.',
+    },
+    code: 'FREE-DRINK-100',
+    freeItemName: {
+      uz: 'Bepul Muzdek Cola 0.5L',
+      ru: 'Бесплатная Кола 0.5L',
+      en: 'Free Cola 0.5L',
+    },
+  },
+  {
+    id: 'discount-10',
+    coinsRequired: 250,
+    title: {
+      uz: '10% Chegirma Vaucheri',
+      ru: 'Скидка 10% на весь чек',
+      en: '10% Discount Voucher',
+    },
+    description: {
+      uz: 'Butun buyurtma summasidan 10% chegirma taqdim etuvchi eksklyuziv kod.',
+      ru: 'Эксклюзивный промокод на скидку 10% от всей суммы вашей корзины.',
+      en: 'Exclusive promo code giving 10% off your entire cart total.',
+    },
+    code: 'CHORSU10',
+    discountPercentage: 10,
+  },
+  {
+    id: 'special-bonus',
+    coinsRequired: 500,
+    title: {
+      uz: 'Maxsus Chorsu Combo Bonus',
+      ru: 'Фирменный Чорсу Комбо Бонус',
+      en: 'Signature Chorsu Combo Bonus',
+    },
+    description: {
+      uz: 'Bepul Chorsu Classic Burger va qarsildoq fri kartoshkasi vaucheri!',
+      ru: 'Ваучер на бесплатный бургер Чорсу Классик и хрустящий картофель фри!',
+      en: 'Voucher for a free Chorsu Classic Burger and crispy French fries!',
+    },
+    code: 'KING-CHORSU-500',
+    discountPercentage: 25,
+    freeItemName: {
+      uz: 'Bepul Chorsu Classic + Fri',
+      ru: 'Бесплатный Чорсу Классик + Фри',
+      en: 'Free Chorsu Classic + Fries',
+    },
+  },
+];
